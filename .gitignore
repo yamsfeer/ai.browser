@@ -1,0 +1,65 @@
+# 依赖
+node_modules/
+.pnpm-store/
+
+# 构建产物
+dist/
+build/
+*.tsbuildinfo
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# 运行时
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# 覆盖率目录
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 临时文件
+tmp/
+temp/
+
+# Turbo缓存
+.turbo/
+
+# Vitest缓存
+.vitest/
+
+# TypeScript缓存
+*.tsbuildinfo
+
+# 示例输出
+examples/output/
+examples/*.png
+
+# 测试快照
+**/*.snap
+
+# 笔记文件
+notes/

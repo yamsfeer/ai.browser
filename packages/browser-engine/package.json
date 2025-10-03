@@ -1,0 +1,32 @@
+{
+  "name": "@ai-browser/browser-engine",
+  "version": "1.0.0",
+  "description": "浏览器引擎主模块",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "vitest",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "browser",
+    "engine",
+    "renderer"
+  ],
+  "author": "AI Assistant",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@ai-browser/types": "workspace:*",
+    "@ai-browser/html-parser": "workspace:*",
+    "@ai-browser/css-parser": "workspace:*",
+    "@ai-browser/layout-engine": "workspace:*",
+    "@ai-browser/render-engine": "workspace:*",
+    "@ai-browser/javascript-engine": "workspace:*"
+  }
+}

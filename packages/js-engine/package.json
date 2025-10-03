@@ -1,0 +1,93 @@
+{
+  "name": "@ai-browser/javascript-engine",
+  "version": "1.0.0",
+  "description": "AI Browser JavaScript Engine - 一个完整的JavaScript引擎实现",
+  "main": "src/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "example": "node examples/basic-usage.js",
+    "clean": "rimraf dist",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "javascript",
+    "engine",
+    "parser",
+    "interpreter",
+    "compiler",
+    "lexer",
+    "ast",
+    "runtime",
+    "javascript-engine",
+    "browser-engine"
+  ],
+  "author": "AI Browser Team",
+  "license": "MIT",
+  "dependencies": {
+    "@ai-browser/types": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.2.4",
+    "rimraf": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ai-browser/ai-browser.git",
+    "directory": "packages/javascript-engine"
+  },
+  "bugs": {
+    "url": "https://github.com/ai-browser/ai-browser/issues"
+  },
+  "homepage": "https://github.com/ai-browser/ai-browser#readme",
+  "files": [
+    "dist",
+    "src",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./engine": {
+      "types": "./dist/engine.d.ts",
+      "default": "./dist/engine.js"
+    },
+    "./lexer": {
+      "types": "./dist/lexer/index.d.ts",
+      "default": "./dist/lexer/index.js"
+    },
+    "./parser": {
+      "types": "./dist/parser/index.d.ts",
+      "default": "./dist/parser/index.js"
+    },
+    "./interpreter": {
+      "types": "./dist/interpreter/index.d.ts",
+      "default": "./dist/interpreter/index.js"
+    },
+    "./runtime": {
+      "types": "./dist/runtime/event-loop.d.ts",
+      "default": "./dist/runtime/event-loop.js"
+    },
+    "./memory": {
+      "types": "./dist/memory/garbage-collector.d.ts",
+      "default": "./dist/memory/garbage-collector.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/types/index.js"
+    }
+  }
+}

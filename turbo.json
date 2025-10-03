@@ -1,0 +1,64 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "globalEnv": ["NODE_ENV", "CI"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "build/**", "*.d.ts"]
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "outputs": [],
+      "inputs": [
+        "src/**/*.js",
+        "src/**/*.ts",
+        "test/**/*.js",
+        "test/**/*.ts",
+        "package.json",
+        "tsconfig.json"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "outputs": [],
+      "inputs": [
+        "src/**/*.js",
+        "src/**/*.ts",
+        "package.json"
+      ]
+    },
+    "type-check": {
+      "dependsOn": ["^build"],
+      "outputs": [],
+      "inputs": [
+        "src/**/*.ts",
+        "tsconfig.json"
+      ]
+    },
+    "clean": {
+      "cache": false
+    },
+    "format": {
+      "outputs": [],
+      "inputs": [
+        "**/*.{js,ts,json,md}",
+        ".prettierrc",
+        ".prettierignore"
+      ]
+    },
+    "//#test": {
+      "dependsOn": ["build"],
+      "outputs": [],
+      "inputs": [
+        "src/**/*.js",
+        "src/**/*.ts",
+        "test/**/*.js",
+        "test/**/*.ts"
+      ]
+    }
+  }
+}

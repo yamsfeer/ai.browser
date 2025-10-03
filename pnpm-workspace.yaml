@@ -1,0 +1,41 @@
+packages:
+  - "packages/*"
+  - "!packages/__tests__/**"
+
+# 配置共享依赖
+shared-workspace-lockfile: true
+
+# 配置依赖链接方式
+link-workspace-packages: true
+
+# 配置包管理器
+package-manager: pnpm@8.0.0
+
+# 配置缓存
+cache-dir: .pnpm-store
+
+# 配置npm镜像
+registry: https://registry.npmjs.org/
+
+# 配置严格模式
+strict-peer-dependencies: true
+
+# 配置自动安装
+auto-install-peers: true
+
+# 配置忽略脚本
+ignore-scripts: false
+
+# 配置公共依赖
+catalog:
+  typescript: ~5.0.0
+  vitest: ~3.2.4
+  prettier: ~3.0.0
+  eslint: ~8.0.0
+
+# 配置开发依赖
+devDependencies:
+  typescript: 'catalog:typescript'
+  vitest: 'catalog:vitest'
+  prettier: 'catalog:prettier'
+  eslint: 'catalog:eslint'

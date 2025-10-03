@@ -1,0 +1,45 @@
+{
+  "name": "ai-browser",
+  "version": "1.0.0",
+  "description": "简单的浏览器内核实现",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "vitest",
+    "test:run": "node test/run-tests.js",
+    "test:js": "vitest test/JSEngine.test.js",
+    "test:all": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{js,ts,json,md}\"",
+    "lint": "eslint packages/*/src/**/*.js",
+    "example": "node examples/basic-example.js",
+    "example:js": "open examples/js-example.html"
+  },
+  "keywords": [
+    "browser",
+    "engine",
+    "renderer",
+    "html",
+    "css",
+    "monorepo"
+  ],
+  "author": "AI Assistant",
+  "license": "MIT",
+  "devDependencies": {
+    "turbo": "^1.10.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.2.4",
+    "prettier": "^3.0.0",
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.0.0"
+}

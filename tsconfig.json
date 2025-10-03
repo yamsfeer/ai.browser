@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ai-browser/*": ["packages/*/src"],
+      "@ai-browser/types": ["packages/types/src"],
+      "@ai-browser/html-parser": ["packages/render-engine/src/main/html-parser/src"],
+      "@ai-browser/css-parser": ["packages/css-parser/src"],
+      "@ai-browser/layout-engine": ["packages/layout-engine/src"],
+      "@ai-browser/render-engine": ["packages/render-engine/src"],
+      "@ai-browser/browser-engine": ["packages/browser-engine/src"]
+    }
+  },
+  "include": ["packages/types/src/**/*"],
+  "exclude": ["node_modules", "dist", "build", "**/*.test.js", "**/*.spec.js"],
+  "references": [
+    {
+      "path": "./packages/types"
+    }
+  ]
+}
